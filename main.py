@@ -8,7 +8,7 @@ numberOfStation = 10
 for n in (range(1, numberOfStation+1)):
     sourcePath.append("bt" + "%03d" % n + "-noaa.rwl.txt")
 print(sourcePath)
-targetPath = 'output.txt'
+targetPath = 'output.asc'
 for i in range(len(sourcePath)):
     if i == 0:
         with open(sourcePath[0], 'r') as f:
