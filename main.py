@@ -3,12 +3,12 @@ tempList = []
 tempStr = ""
 sourcePath = []
 
-divider = "   "
+divider = "\t"
 
 numberOfTree = 12
 numberOfStation = 10
 for n in (range(1, numberOfStation+1)):
-    sourcePath.append("target/" + "TARGET" + str(n) + ".txt")
+    sourcePath.append("prunedSource/" + "prunedSource" + str(n) + ".txt")
 print(sourcePath)
 targetPath = 'output.asc'
 for i in range(len(sourcePath)):
@@ -52,16 +52,17 @@ for i in range(len(sourcePath)):
                         k = k + 1
                         countTab = countTab + 1
 
+
+print(tempList)
+
 for l in range(len(sourcePath)-1, len(tempList), len(sourcePath)):
     tempList[l] = tempList[l] + "\n"
     for m in range(1, len(sourcePath)):
         tempList[l-m] = tempList[l-m] + divider
 
-# for m in range(len(sourcePath)-1):
-#     for n in range()
 
 with open(targetPath, 'w') as t:
     t.writelines(tempList)
 
-print(tempList)
-print(len(tempList))
+# print(tempList)
+# print(len(tempList))
