@@ -8,7 +8,7 @@ divider = "   "
 numberOfTree = 12
 numberOfStation = 10
 for n in (range(1, numberOfStation+1)):
-    sourcePath.append("TARGET" + str(n) + ".txt")
+    sourcePath.append("target/" + "TARGET" + str(n) + ".txt")
 print(sourcePath)
 targetPath = 'output.asc'
 for i in range(len(sourcePath)):

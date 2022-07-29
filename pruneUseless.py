@@ -10,9 +10,9 @@ sourcePath = []
 targetPath = []
 
 for i in (range(1, numberOfStation+1)):
-    sourcePath.append("bt" + "%03d" % i + "-noaa.rwl.txt")
+    sourcePath.append("source/" + "bt" + "%03d" % i + "-noaa.rwl.txt")
 for i in (range(1, numberOfStation+1)):
-    targetPath.append("TARGET" + str(i) + ".txt")
+    targetPath.append("target/" + "TARGET" + str(i) + ".txt")
 
 for i in range(len(sourcePath)):
     with open(sourcePath[i], "r") as f:
