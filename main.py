@@ -3,6 +3,8 @@ tempList = []
 tempStr = ""
 sourcePath = []
 
+divider = "   "
+
 numberOfTree = 12
 numberOfStation = 10
 for n in (range(1, numberOfStation+1)):
@@ -53,7 +55,7 @@ for i in range(len(sourcePath)):
 for l in range(len(sourcePath)-1, len(tempList), len(sourcePath)):
     tempList[l] = tempList[l] + "\n"
     for m in range(1, len(sourcePath)):
-        tempList[l-m] = tempList[l-m] + "\t"
+        tempList[l-m] = tempList[l-m] + divider
 
 # for m in range(len(sourcePath)-1):
 #     for n in range()
